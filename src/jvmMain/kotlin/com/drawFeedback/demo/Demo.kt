@@ -253,7 +253,7 @@ fun DemoScreen() {
     val closeGapPx = with(density) { 10.dp.toPx() }
     val closeSizePx = with(density) { 30.dp.toPx() }
 
-    // ✅ Reliable window size: constraints update on resize
+    //  Reliable window size: constraints update on resize
     BoxWithConstraints(
         Modifier
             .fillMaxSize()
