@@ -39,7 +39,7 @@ kotlin {
 
         val jvmMain by getting {
             dependencies {
-                implementation(compose.desktop.currentOs) // ✅ required to run desktop demo
+                implementation(compose.desktop.currentOs) //  required to run desktop demo
             }
         }
 
