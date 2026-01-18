@@ -17,7 +17,7 @@ Designed as a **low-level primitive**, this library helps you build selection-ba
 
 ---
 
-##  Installation
+## Installation
 
 >  Publishing to Maven Central is planned.  
 > For now, you can depend on the library via source or GitHub packages.
@@ -25,4 +25,57 @@ Designed as a **low-level primitive**, this library helps you build selection-ba
 (Once published, usage will look like:)
 
 ```kotlin
-implementation("me.kashy:dragfeedback-core:0.1.0")
+implementation("me.kashy:dragfeedback-core:0.1.0") 
+```
+
+```kotlin
+#  Quick Start
+DragHighlightBox(
+    enabled = true,
+    onSelectionEnd = { rect ->
+        // Handle selection rectangle
+    }
+) {
+    // Your composable content
+}
+```
+
+# Customization
+
+You can customize how the selection rectangle looks using DragFeedbackStyle:
+```kotlin
+DragHighlightBox(
+    style = DragFeedbackStyle(
+        fillColor = Color(0x3388BFFF),
+        strokeColor = Color(0xFF66AFFF),
+        strokeWidthPx = 2f
+    ),
+    onSelectionEnd = { rect -> }
+) {
+    CanvasContent()
+}
+```
+
+# Hit Testing
+
+To prevent selection from starting when the user drags an item (instead of empty space), use canStartSelection:
+```kotlin
+DragHighlightBox(
+    canStartSelection = { downOffset ->
+        items.none { it.bounds.contains(downOffset) }
+    },
+    onSelectionEnd = { rect -> }
+) {
+    CanvasContent()
+}
+```
+
+
+# Demo
+
+A desktop demo application is included in the repository to showcase integration patterns and usage.
+The demo is not part of the published library.
+
+# Contributions
+Issues and feature requests are welcome.
+Please open an issue before submitting large changes.
