@@ -25,7 +25,7 @@ Designed as a **low-level primitive**, this library helps you build selection-ba
 (Once published, usage will look like:)
 
 ```kotlin
-implementation("me.kashy:dragfeedback-core:0.1.0") 
+implementation("io.github.iknowdeadpool:dragfeedback-core:0.1.0") 
 ```
 
 ```kotlin
