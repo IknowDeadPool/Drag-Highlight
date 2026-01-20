@@ -19,10 +19,7 @@ Designed as a **low-level primitive**, this library helps you build selection-ba
 
 ## Installation
 
->  Publishing to Maven Central is planned.  
-> For now, you can depend on the library via source or GitHub packages.
-
-(Once published, usage will look like:)
+>  Published to Maven Central.  
 
 ```kotlin
 implementation("io.github.iknowdeadpool:dragfeedback-core:0.1.0") 
